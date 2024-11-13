@@ -27,7 +27,7 @@ Here’s an overview of the project’s file structure, making it easier to navi
 
 ```plaintext
 📁 online-cake-order/
-├── 📁 config/
+├── 📁 init/
 │   └── db.js          # MongoDB connection configuration
 ├── 📁 controllers/
 │   └── cakeController.js  # Handles cake-related logic
