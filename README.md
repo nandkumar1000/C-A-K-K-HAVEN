@@ -28,7 +28,7 @@ Here’s an overview of the project’s file structure, making it easier to navi
 ```plaintext
 📁 online-cake-order/
 ├── 📁 init/
-│   └── db.js          # MongoDB connection configuration
+│   └── index.js         # MongoDB connection configuration
 ├── 📁 controllers/
 │   └── cakeController.js  # Handles cake-related logic
 ├── 📁 models/
@@ -45,7 +45,7 @@ Here’s an overview of the project’s file structure, making it easier to navi
 │   └── 📄 order.ejs    # Order form page
 ├── 📄 app.js           # Main server file that starts the application
 ├── 📄 package.json     # Project dependencies and scripts
-└── 📄 .env             # Environment variables (e.g., MongoDB URI)
+
 ```
 
 ### Explanation:
