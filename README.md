@@ -74,7 +74,7 @@ Want to run this yummy cake platform on your local machine? 🍰 Follow these si
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https:https://github.com/nandkumar1000/C-A-K-K-HAVEN.git
+   git clone https://github.com/nandkumar1000/C-A-K-K-HAVEN.git
    ```
 
 2. **Navigate to the Project Directory**:  
@@ -89,7 +89,7 @@ Want to run this yummy cake platform on your local machine? 🍰 Follow these si
    ```
 
 4. **Set Up MongoDB**:  
-   Make sure you have MongoDB running on your local machine or set up a remote MongoDB Atlas cluster. Add your connection string in the `.env` file.
+   Make sure you have MongoDB running on your local machine or set up a remote MongoDB Atlas cluster. 
 
 5. **Start the Application**:  
    Fire up the server by running:  
