@@ -57,7 +57,6 @@ Here’s an overview of the project’s file structure, making it easier to navi
 - **`routes/`**: Defines the routes/endpoints for cake management and user interactions.
 - **`views/`**: EJS templates that dynamically render HTML content for different pages.
 - **`app.js`**: The main entry point of the application, starting the Node.js server.
-- **`.env`**: File for environment variables like the MongoDB connection string.
 
 ## ✨ **Features**
 
@@ -75,7 +74,7 @@ Want to run this yummy cake platform on your local machine? 🍰 Follow these si
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/your-username/online-cake-order.git
+   git clone https:https://github.com/nandkumar1000/C-A-K-K-HAVEN.git
    ```
 
 2. **Navigate to the Project Directory**:  
