@@ -291,5 +291,4 @@ router.get('/allOrders', isUserAuthenticated, async (req, res) => {
   res.redirect('/user/AddToCart')
 })
 
-
 module.exports = router

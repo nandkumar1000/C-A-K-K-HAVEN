@@ -1,0 +1,202 @@
+<%- include('layouts/head.ejs'); %>
+  <style>
+    .about-us img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .about-us img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-us h2 {
+      color: #2c3e50;
+    }
+
+    .about-us .btn-primary {
+      background-color: #ff6f61;
+      border-color: #ff6f61;
+    }
+
+    .about-us .btn-primary:hover {
+      background-color: #e55c50;
+      border-color: #e55c50;
+    }
+
+    .about-us .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-us .card-body {
+      padding: 2rem;
+    }
+
+    .about-us .card {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .about-us .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-delicious {
+      background-color: #f5a623;
+    }
+
+    .card-ordering {
+      background-color: #4a90e2;
+    }
+
+    .card-delivery {
+      background-color: #50e3c2;
+    }
+
+    .card-quality {
+      background-color: #9013fe;
+    }
+
+    .card-love {
+      background-color: #e94e77;
+    }
+
+    .card-delicious .feature-icon,
+    .card-ordering .feature-icon,
+    .card-delivery .feature-icon,
+    .card-quality .feature-icon,
+    .card-love .feature-icon {
+      color: white;
+    }
+
+    .card-delicious:hover {
+      background-color: #e57b1f;
+    }
+
+    .card-ordering:hover {
+      background-color: #357ABD;
+    }
+
+    .card-delivery:hover {
+      background-color: #36b39e;
+    }
+
+    .card-quality:hover {
+      background-color: #7e12e4;
+    }
+
+    .card-love:hover {
+      background-color: #d43c5f;
+    }
+  </style>
+
+  <section class="about-us py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">About Us</h2>
+        <p class="text-muted fs-5">
+          Discover the joy of ordering cakes online with <span class="highlight">Sweet Treats</span>. We bring you
+          closer to local bakeries, ensuring every celebration is unforgettable.
+        </p>
+      </div>
+
+      <!-- Features Section -->
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card shadow-sm border-0 card-delicious">
+            <div class="card-body">
+              <div class="feature-icon">
+                <i class="bi bi-cupcake"></i>
+              </div>
+              <h5 class="fw-bold text-white">Delicious Variety</h5>
+              <p class="text-white">
+                Explore a wide range of cakes, from classic flavors to unique creations, perfect for any occasion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card shadow-sm border-0 card-ordering">
+            <div class="card-body">
+              <div class="feature-icon">
+                <i class="bi bi-bag-check"></i>
+              </div>
+              <h5 class="fw-bold text-white">Easy Ordering</h5>
+              <p class="text-white">
+                Enjoy a seamless and hassle-free online ordering experience with our user-friendly platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card shadow-sm border-0 card-delivery">
+            <div class="card-body">
+              <div class="feature-icon">
+                <i class="bi bi-truck"></i>
+              </div>
+              <h5 class="fw-bold text-white">Fast Delivery</h5>
+              <p class="text-white">
+                Get your cakes delivered fresh and on time, so you can focus on celebrating the moments that matter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card shadow-sm border-0 card-quality">
+            <div class="card-body">
+              <div class="feature-icon">
+                <i class="bi bi-stars"></i>
+              </div>
+              <h5 class="fw-bold text-white">Premium Quality</h5>
+              <p class="text-white">
+                We ensure the highest standards of quality and freshness in every bite of cake you enjoy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card shadow-sm border-0 card-love">
+            <div class="card-body">
+              <div class="feature-icon">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <h5 class="fw-bold text-white">Made with Love</h5>
+              <p class="text-white">
+                Each cake is crafted with love, passion, and the finest ingredients to bring you the best taste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlight Section -->
+      <div class="row align-items-center mt-5">
+        <div class="col-md-6 order-md-2">
+          <img src="https://images.pexels.com/photos/1028727/pexels-photo-1028727.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="About Us" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-3">Our Mission</h3>
+          <p class="text-muted fs-5">
+            At <span class="highlight">Sweet Treats</span>, we believe every moment deserves a touch of sweetness. Our
+            mission is to connect local bakers with cake lovers while delivering joy in every bite.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="bi bi-heart-fill text-danger"></i> Support for local businesses
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-check-circle text-success"></i> Fresh, high-quality ingredients
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-emoji-smile text-warning"></i> Exceptional customer service
+            </li>
+          </ul>
+          <a href="/about" class="btn btn-primary btn-lg mt-3">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>

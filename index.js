@@ -92,12 +92,23 @@ app.get('/', (req, res) => {
   res.render('admin/index')
 
 })
-  /
+app.get("/blog", (req, res) => {
+  res.render("./user/blog.ejs");
+})
+app.get("/about", (req, res) => {
+  res.render("./user/about.ejs");
+})
+app.get("/FAQ", (req, res) => {
+  res.render("./user/FAQ.ejs");
+})
+app.get("/contact", (req, res) => {
+  res.render("./user/contact.ejs");
+})
 
-  // Error handler middleware   
-  app.all('*', (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found"))
-  })
+// Error handler middleware   
+app.all('*', (req, res, next) => {
+  next(new ExpressError(404, "Page Not Found"))
+})
 
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "some thing went wrong" } = err;

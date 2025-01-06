@@ -1,69 +1,132 @@
 <%- include('layouts/head.ejs'); %>
 
     <body>
-        <div class="profile-container">
-        <%- include('layouts/userNav.ejs'); %>
+        <div class="profile-container bg-light">
+            <%- include('layouts/userNav.ejs'); %>
 
-            <div class="main">
-                <div class="user-detail">
-                    <h4>Username: <span><%= user.username %></span></h4>
-                    <h4>Email ID: <%= user.email %></span></h4>
-                    <a href="/user/logout" class="logout">Log Out</a>
-                </div>
-                <div class="card">
-                    <a href="/user/orders"><span><i class="fa-solid fa-dolly"></i></span> Orders <span><i
-                                class="fa-solid fa-chevron-right"></i></span></a>
-                    <a href="#"><span><i class="fa-solid fa-ticket"></i></span> Coupons <span><i
-                                class="fa-solid fa-chevron-right"></i></span></a>
-                </div>
-                <div class="pay">
-                    <div class="pa1">
-                        <span><i class="fa-solid fa-credit-card e1"></i></span>
-                        <span>
-                            <h5>Payments & Currencies</h5>
-                            <p>View balance and save payment methods</p>
-                        </span>
-                    </div>
-                    <span><i class="fa-solid fa-chevron-down e2"></i></span>
-                </div>
-
-                <div class="pay">
-                    <div class="pa1">
-                        <span><i class="fa-solid fa-wallet e1"></i></span>
-                        <span>
-                            <h5>Earn & Redeem</h5>
-                            <p>Scan Coupons, view prizes and earn rewards</p>
-                        </span>
-                    </div>
-                    <span><i class="fa-solid fa-chevron-down e2"></i></span>
-                </div>
-                <a href="/user/Address/update">
-                    <div class="pay">
-                        <div class="pa1">
-                            <span><i class="fa-regular fa-pen-to-square e1"></i></span>
-                            <span>
-                                <h5>Manage Account</h5>
-                                <p>Manage your account and save address</p>
-                            </span>
+                <div class="main container py-5">
+                    <!-- Profile Header -->
+                    <div class="profile-header d-flex align-items-center mb-4">
+                        <div class="profile-image me-4">
+                            <img src="/path/to/user/profile-pic.jpg" alt="User Profile" class="rounded-circle border"
+                                style="width: 100px; height: 100px;">
                         </div>
-                        <span><i class="fa-solid fa-chevron-down e2"></i></span>
+                        <div class="user-info">
+                            <h3 class="mb-1">Welcome, <%= user.username %>
+                            </h3>
+                            <p class="text-muted mb-1">Email: <%= user.email %>
+                            </p>
+                            <a href="/user/logout" class="btn btn-danger btn-sm">Log Out</a>
+                        </div>
                     </div>
 
-                </a>
+                    <!-- Action Cards -->
+                    <div class="row g-4">
+                        <!-- Orders -->
+                        <div class="col-md-6">
+                            <a href="/user/orders" class="card border-0 shadow-sm text-decoration-none">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-solid fa-dolly fa-2x text-primary me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Orders</h5>
+                                        <small class="text-muted">View your past orders</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right ms-auto text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
 
-                <div class="pay">
-                    <div class="pa1">
-                        <span><i class="fa-solid fa-gear e1"></i></span>
-                        <span>
-                            <h5>Settings</h5>
-                            <p>Manage Notifications</p>
-                        </span>
+                        <!-- Coupons -->
+                        <div class="col-md-6">
+                            <a href="#" class="card border-0 shadow-sm text-decoration-none">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-solid fa-ticket fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Coupons</h5>
+                                        <small class="text-muted">View and redeem available coupons</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right ms-auto text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Payments -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-solid fa-credit-card fa-2x text-info me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Payments & Currencies</h5>
+                                        <small class="text-muted">View balance and save payment methods</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down ms-auto text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rewards -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-solid fa-wallet fa-2x text-warning me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Earn & Redeem</h5>
+                                        <small class="text-muted">Scan coupons, view prizes, and earn rewards</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down ms-auto text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Manage Account -->
+                        <div class="col-md-6">
+                            <a href="/user/Address/update" class="card border-0 shadow-sm text-decoration-none">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-regular fa-pen-to-square fa-2x text-secondary me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Manage Account</h5>
+                                        <small class="text-muted">Update your profile and address</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right ms-auto text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Settings -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="fa-solid fa-gear fa-2x text-dark me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">Settings</h5>
+                                        <small class="text-muted">Manage notifications and preferences</small>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down ms-auto text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <span><i class="fa-solid fa-chevron-down e2"></i></span>
+
+                    <!-- Additional Section: Activity -->
+                    <div class="mt-5">
+                        <h4 class="mb-3">Recent Activity</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fa-solid fa-check-circle text-success me-3"></i>
+                                <span>Order #12345 was successfully delivered.</span>
+                                <span class="ms-auto text-muted">2 days ago</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fa-solid fa-gift text-info me-3"></i>
+                                <span>You redeemed a coupon for 20% off your next order.</span>
+                                <span class="ms-auto text-muted">5 days ago</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
         </div>
-            <%- include('layouts/footer.ejs') %>
+
+        <%- include('layouts/footer.ejs') %>
     </body>
 
     </html>
